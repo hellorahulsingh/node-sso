@@ -1,11 +1,11 @@
 # A simple implementation of single sign-on (SSO) central authorization unit and client in 500 lines of Node.js
 
 ### Important
-To Run these examples you need to add the below entry inside your `/etc/hosts` file in linux
+To Run these examples you need to add the below entry inside your `/etc/hosts` file in mac
 
 ```
-127.0.0.1   sso.ankuranand.com
-127.0.0.1   consumer.ankuranand.in
+127.0.0.1   sso.rahulsingh.com
+127.0.0.1   consumer.rahulsingh.in
 ```
 
 ## Introduction
@@ -51,7 +51,7 @@ const isAuthenticated = (req, res, next) => {
   const redirectURL = `${req.protocol}://${req.headers.host}${req.path}`;
   if (req.session.user == null) {
     return res.redirect(
-      `http://sso.ankuranand.com:3010/simplesso/login?serviceURL=${redirectURL}`
+      `http://sso.rahulsingh.com:3010/simplesso/login?serviceURL=${redirectURL}`
     );
   }
   next();
@@ -100,8 +100,8 @@ We are checking if the serviceURL that has came as query to the ‘sso-server’
 
 ```javascript
     const alloweOrigin = {
-    "http://consumer.ankuranand.in:3020": true,
-    "http://consumertwo.ankuranand.in:3030": true,
+    "http://consumer.rahulsingh.in:3020": true,
+    "http://consumertwo.rahulsingh.in:3030": true,
     "http://test.tangledvibes.com:3080": true,
     "http://blog.tangledvibes.com:3080": fasle,
     };
@@ -231,7 +231,7 @@ You can also define application-level policy at the centralized place.
 
 ```javascript
 const userDB = {
-  "info@ankuranand.com": {
+  "info@rahulsingh.com": {
     password: "test",
     userId: encodedId(), // incase you dont want to share the user-email.
     appPolicy: {
