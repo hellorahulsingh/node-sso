@@ -280,4 +280,4 @@ Similarly we can implement the “Logout”, just we need to consider these thre
 ### sso-server is our central authorization unit
 ### sso-consumer is how different consumer can be implemented to talk with sso-server and use sso feature.
 
-# reference: https://github.com/ankur-anand/simple-sso
+### reference: https://github.com/ankur-anand/simple-sso
