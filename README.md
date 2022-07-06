@@ -1,4 +1,4 @@
-# A simple implementation of single sign-on (SSO) central authorization unit and client in 500 lines of Node.js
+# A simple implementation of single sign-on (SSO) central authorization unit and client in Node.js
 
 ### Important
 To Run these examples you need to add the below entry inside your `/etc/hosts` file in mac
@@ -279,3 +279,5 @@ Similarly we can implement the “Logout”, just we need to consider these thre
 
 ### sso-server is our central authorization unit
 ### sso-consumer is how different consumer can be implemented to talk with sso-server and use sso feature.
+
+# reference: https://github.com/ankur-anand/simple-sso
